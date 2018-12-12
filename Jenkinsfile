@@ -1,6 +1,6 @@
 pipeline {
   agent {
-	docker { image 'node:10' }
+	label 'my-node-label'
   }
   stages {  
     stage('Install dependencies') {
