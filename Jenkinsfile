@@ -1,6 +1,6 @@
 pipeline {
   agent {
-	docker { image 'node:8' }
+	docker { image 'node:10' }
   }
   
   stages {  
@@ -27,11 +27,5 @@ pipeline {
          sh 'npm test'
       }
     }
-
-    stage('Publish the application') {
-      steps {
-         sh 'docker build .'
-      }
-    }	
   }
 }
