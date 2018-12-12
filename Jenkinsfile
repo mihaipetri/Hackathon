@@ -18,5 +18,10 @@ pipeline {
          sh 'npm test'
       }
     }
+	stage('Publish the application') {
+      steps {
+         sh 'docker build -t hackathon-app:$BUILD_NUMBER .'
+      }
+    }
   }
 }
