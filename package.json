@@ -4,6 +4,7 @@
   "description": "This is a hackathon application with node.js",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "node --version"
   },
   "repository": {
