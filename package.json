@@ -1,0 +1,22 @@
+{
+  "name": "hackathon-app",
+  "version": "1.0.0",
+  "description": "This is a hackathon application with node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "node --version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mihaipetri/Hackathon.git"
+  },
+  "keywords": [
+    "hackathon"
+  ],
+  "author": "Mihai Petrica",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mihaipetri/Hackathon/issues"
+  },
+  "homepage": "https://github.com/mihaipetri/Hackathon#readme"
+}
