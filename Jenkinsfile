@@ -1,6 +1,6 @@
 pipeline {
   agent {
-	label 'my-node-label'
+	label 'slave2'
   }
   stages {  
     stage('Install dependencies') {
