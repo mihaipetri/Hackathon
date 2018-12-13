@@ -1,8 +1,16 @@
 pipeline {
-  agent {
-	label 'my-node-label'
+  agent { 
+    dockerfile {
+      filename 'Dockerfile.build'
+      dir 'build'
+    }
   }
-  stages {  
+  stages {
+    stage('Clone the application repository') {
+      steps {
+        git 'https://github.com/mihaipetri/Hackathon.git'
+      }
+    }
     stage('Install dependencies') {
       steps {
         sh 'npm install'
@@ -16,11 +24,6 @@ pipeline {
     stage('Test the application') {
       steps {
          sh 'npm test'
-      }
-    }
-	stage('Publish the application') {
-      steps {
-         sh 'docker build -t hackathon-app:$BUILD_NUMBER .'
       }
     }
   }
