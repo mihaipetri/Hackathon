@@ -1,5 +1,8 @@
 FROM ubuntu
 
+USER root
+
+# install some tools
 RUN apt-get -y update && apt-get -y install curl 
 
 # install node js
